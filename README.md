@@ -29,8 +29,41 @@ Repository ini merupakan kelanjutan dari tugas pemrograman web menggunakan CodeI
   
 4. Menghubungkan Halaman ke Layout
 
-   Mengubah file home.php (atau index.php) agar menggunakan template induk dengan perintah.
+   Mengubah file home.php (atau index.php) agar menggunakan template induk dengan perintah:
 
+PHP
+
+<?= $this->extend('layout/main') ?>
+
+<?= $this->section('content') ?>
+
+<?= $this->endSection() ?>
+
+
+# Sturktur Folder
+
+app/
+
+├── Cells/
+
+│   └── ArtikelTerkini.php (Logika View Cell)
+
+├── Controllers/
+
+│   └── Artikel.php (Controller Utama)
+
+└── Views/
+
+  ├── layout/
+  
+  │   └── main.php (Template Induk)
+  
+  ├── components/
+  
+  │   └── artikel_terkini.php (Tampilan View Cell)
+  
+  └── home.php (Halaman Konten)
+    
 # Pertanyaan Tugas
 
 1. Apa manfaat utama penggunaan View Layout?
